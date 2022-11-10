@@ -2,14 +2,14 @@ import os, base64, json, requests
 from flask import Flask, render_template, request, flash
 
 # Define Cognitive Services variables
-# vision_key = os.environ['VISION_KEY']
-vision_key = '5cfc1a45befb4de5ab3887c1798083c8'
-# vision_endpoint = os.environ['VISION_ENDPOINT']
-vision_endpoint = 'https://intellipix-vision.cognitiveservices.azure.com/'
-# translator_key = os.environ['TRANSLATOR_KEY']
-translator_key = 'ad2f30ffe578426fae0e1b5268ba73e9'
-translator_endpoint = 'https://api.cognitive.microsofttranslator.com/'
-# translator_endpoint = os.environ['TRANSLATOR_ENDPOINT']
+vision_key = os.environ['VISION_KEY']
+# vision_key = '5cfc1a45befb4de5ab3887c1798083c8'
+vision_endpoint = os.environ['VISION_ENDPOINT']
+# vision_endpoint = 'https://intellipix-vision.cognitiveservices.azure.com/'
+translator_key = os.environ['TRANSLATOR_KEY']
+# translator_key = 'ad2f30ffe578426fae0e1b5268ba73e9'
+# translator_endpoint = 'https://api.cognitive.microsofttranslator.com/'
+translator_endpoint = os.environ['TRANSLATOR_ENDPOINT']
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
